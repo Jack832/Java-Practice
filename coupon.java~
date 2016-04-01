@@ -1,0 +1,34 @@
+//part1 create random numbers
+import java.util.*;
+
+import java.util.ArrayList;
+
+public class coupon
+{
+ 	public static void main(String arg[])
+        {
+	ArrayList<Integer> al= new ArrayList<Integer>();
+	int random=0;
+        Scanner sc= new Scanner(System.in);
+	System.out.println("enter the size of array list");
+        int no=sc.nextInt();
+
+	for(int i=0;i<no;i++)
+	{
+        	double p=Math.random();
+                random++;
+                p=p*10;
+                int pick=(int)p;
+                al.add(pick);
+	}
+                HashSet<Integer> hs=new HashSet<>(al);
+                ArrayList<Integer> result= new ArrayList<>(hs);          	
+		System.out.println(result.toString());
+                System.out.println("random executed for"+random);
+         
+}     
+}
+      
+//part2 save it in arraylist
+//part3again create random number and check
+//create function

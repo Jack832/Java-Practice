@@ -1,0 +1,138 @@
+
+package sorting;
+import java.util.*;
+import java.io.*;
+public class packutil
+{
+
+// include all methods   binary search for Array
+	 public static int binarySearch(int min, int max, String word , String[] words)
+	 {
+         	if(max<min)
+		{
+    		return -1;
+		}
+			int mid=(min+max)/2;
+			if(words[mid].equals(word))
+			{
+				return mid;
+			}
+			else if(words[mid].compareTo(word) > 0)
+			{
+			return binarySearch(min ,mid-1,word,words);
+			}
+			else
+			{
+			return binarySearch(mid+1 ,max,word,words);
+			}
+	 } 
+// binary search for integer
+     public static void binarySearch(int min,int max)
+	 {
+	  while(min<=max)
+		{
+			int mid=(min+max)/2;
+			System.out.println("this is your number??"+mid);
+			System.out.println("your number is greater than   this?? Y/N");
+    		        Scanner sc= new Scanner(System.in);
+			char result=sc.next().charAt(0);
+    		if( result=='y')
+			{
+				min=mid;
+    		}
+    		else
+			{
+    			max=mid;
+    		}
+ 	
+		} 
+     }	
+ //insertion search for Array
+     public static void insertion(int len,String[] arr)
+     {
+     	for(int i=1; i<len;i++)
+		{
+    		for(int k=i;k>0;k--)
+			{	 
+				if(arr[k].compareTo(arr[k-1]) < 0)
+				{
+
+    			String temp=arr[k];
+     			arr[k]=arr[k-1];
+     			arr[k-1]=temp;
+                 }
+										
+			}
+		}
+         for(int l=0;l<len;l++)
+		   {
+		     System.out.println(" after sort "+arr[l]+"\n");
+		   }		
+       } 
+//insertion for integer
+     public static void insertioninteger(int len,int [] arr)
+    {
+     for(int i=1; i<len;i++)
+	 {
+	  for(int k=i;k>0;k--)
+	   {	 
+		if(arr[k]<(arr[k-1]))
+		{
+  			int temp=arr[k];
+   			arr[k]=arr[k-1];
+   			arr[k-1]=temp;
+         }
+	   }
+	 }
+        for(int l=0;l<len;l++)
+		{	
+			System.out.println(" sort "+arr[l]+"\n");
+		}
+ }
+
+//bubble for integer
+      public static void bubble(int value,int [] arr)
+      {
+	  for(int i=0;i<value;i++)
+      {
+       for(int o=0;o<value-1;o++)
+       {
+    	if(arr[o]<arr[o+1])
+       	{
+        int temp= arr[o+1];
+        arr[o+1]=arr[o];
+        arr[o]=temp;
+       	}
+       }
+      }
+    		for(int l=0;l<value;l++)
+				{	
+					System.out.println(" sort "+arr[l]+"\n");
+				}
+ }
+//bubble for Array
+      public static void bubblearr(int len,String[] arr)
+     {
+		for(int i=0; i<len;i++)
+		{
+    	 for(int k=0;k<len-1;k++)
+		 {	 
+		  if(arr[k].compareTo(arr[k+1]) > 0)
+	        {
+        	String temp=arr[k];
+     		arr[k]=arr[k+1];
+     		arr[k+1]=temp;
+               }
+	     }
+        }
+
+//print
+	  for(int l=0;l<len;l++)
+	   {
+	     System.out.println(" after sort "+arr[l]+"\n");
+	    }
+     }
+}
+public static void main() 
+	    
+

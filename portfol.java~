@@ -1,0 +1,51 @@
+import java.util.*;
+class portfol
+{
+public static void main(String arg[])
+{
+//part1 : defining stocks ,stokes name and price in array
+    Scanner sc= new Scanner(System.in);
+    System.out.println("enter the no of stocks");
+    int no=sc.nextInt();
+    String a[]=new String [no];    
+    int b[]=new int [no];
+    int c[]=new int [no];
+    int ab[]=new int[no];
+    int ac=0;
+    ArrayList<array> al=new Arraylist();
+    for(int p=0;p<no;p++)
+    	{
+    	System.out.println("enter the name of stocks");
+    	a[p]=sc.next();
+	al.add(a[p]);
+    	System.out.println("enter the shares of stocks");
+    	b[p]=sc.nextInt();
+    	System.out.println("enter the value of share");
+    	c[p]=sc.nextInt();
+    	}
+// finding total
+    	for(int i=0;i<no;i++)
+    	{
+    		ab[i] =b[i]*c[i];
+		System.out.println("for "+i+"st"+ab[i]);
+    	}
+        for(int j=1;j<no;j++)
+	{
+	        ac =ab[0]+ab[j];
+                 System.out.println("total"+ac);
+	}
+		//stock st=new stock();
+system.out.println("the arraylist is"+al);
+}}
+/*part3 print the total share value using arraylist
+for(stock ob:al)
+    
+
+class stock
+{
+*/
+
+
+    
+
+

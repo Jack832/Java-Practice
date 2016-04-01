@@ -1,0 +1,37 @@
+import java.util.regex.*;
+import java.util.*;
+
+public class regexall
+{
+	public static void main(String arg[])
+	{
+		//part1: writing word to replace and input
+		String find="[91][0-9]{10}";
+		String input="Hello <<name>>
+               We have your full name as <<full name>>
+               in our system. your contact number is 91-xxxxxxxxxx .
+               Please,let us know in case of any clarification
+               Thank you";
+		//part2:creating pattern object and our input
+		Pattern p = Pattern.compile(find);
+		Matcher m = p.matcher(input); 
+		String name="0";
+		
+		
+		//part3:using while loop if name is less than3 char
+		while(name.length() <3)
+		{
+			Scanner sc = new Scanner(System.in);
+			System.out.println("enter your name mimimum 3 char ");
+			name=sc.next();
+			if(name.lenght()>=3)
+			{
+			input = m.replaceAll(name);
+			System.out.println(input);
+			break;
+			}
+     		
+	   }
+		
+	}
+}

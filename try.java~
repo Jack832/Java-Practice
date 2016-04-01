@@ -1,0 +1,15 @@
+import java.util.regex.*;
+import java.util.*;
+
+public class tryy
+{
+	public static void main(String arg[])
+	{
+		//part1: writing word to replace and input
+        String input="Hello <<name>> We have your full name as <<full name>> in our system. your contact number is 91-xxxxxxxxxx . Please,let    us know in case of any clarification Thank you";
+         //HashMap<String,String> hs=new HashMap<>();
+       
+         boolean b1=Pattern.matches("[<<name>>]", input);
+         System.out.println("hihd"+b1);
+}
+} 

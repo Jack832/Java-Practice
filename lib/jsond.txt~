@@ -1,0 +1,14 @@
+[
+	{
+        name:"Lima bean",weight:10,price:20
+    },
+ 
+    {     name:"rice" ,weight:20;price:25
+    },
+    {
+    name:"wheat", weight:6,price:28 
+    }
+]
+
+
+

@@ -1,0 +1,37 @@
+import java.util.Arrays;
+
+class rando extends Thread
+{
+public void run()
+{
+
+sum(52);
+sub();
+}
+public void sum(int k)
+{
+System.out.println("sd"+k);
+System.out.println("bye");
+}
+public void sub()
+{
+System.out.println("ds"+7);
+System.out.println("bye");
+}
+
+public static void main(String arg[])
+{
+	int op[]= new int[5];
+	 	
+       for(int j=0;j<op.length;j++)
+     {
+      	op[j]=(int)(Math.random()*200+1);
+      }
+     System.out.println("the random numbers are "+Arrays.toString(op));
+     rando a= new rando();
+     Thread p2= new Thread(a);
+     p2.start();
+     
+
+}
+} 
